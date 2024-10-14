@@ -10,7 +10,7 @@ int main(){
         if(n % i == 0) count += i;
     }
 
-    if(n == 0 || n == 1){
+    if(count == 0 || count == 1){
         cout << "The number is not prime: " << n << endl;
     }else if( count > 2){
         cout << "The number is not prime: " << n << endl; 
