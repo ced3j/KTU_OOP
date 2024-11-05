@@ -1,0 +1,8 @@
+Donald 1 23
+Pluto 2 56
+Doc 1 25
+Pluto 4 23
+Mickey 3 156
+Mickey 2 141
+Goofy 2 34
+Balto 4 272
