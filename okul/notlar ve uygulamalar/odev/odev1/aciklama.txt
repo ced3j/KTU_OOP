@@ -1,0 +1,93 @@
+Bu program, iki ayrı kod dizisini (orjinal kod ve kopya kod) 
+bir dosyadan okuyup, bunları karşılaştırarak bir 
+çıktı dosyasına sonuç yazar. Eğer iki kod dizisi birbirine eşitse, 
+mesajın hatasız iletildiği sonucuna varır; eşit değilse, 
+mesajın hatalı iletildiğini belirtir.
+
+
+
+2. CodeChecker Sınıfı
+    Bu sınıf, programın temel işlevlerini içerir:
+    kodları okumak, kodları karşılaştırmak ve sonuçları yazmak.
+
+        orjinalKod[250]: Bu, orijinal kodun elemanlarını saklamak için kullanılan 250 elemanlı bir tam sayı dizisidir.
+        kopyaKod[250]: Bu dizi ise kopya kodun elemanlarını tutar.
+        length: Kod dizilerinin kaç elemandan oluştuğunu belirtir.
+
+    Bu dizilerin kapasitesi 250 olarak belirlenmiştir,  
+    yani maksimum 250 eleman saklayabilirler. 
+    Eğer kod dizisinin uzunluğu 250’den fazla olursa, 
+    program bu durumu kontrol eder ve bir hata mesajı verir.
+
+
+
+3. readCode Fonksiyonu
+
+
+
+        const std::string& filename
+
+            & kullanarak filename adlı dosyaya string'e direkt ulaşıyoruz
+            Yani bellekte bir kopyasını almadan direkt olarak
+            
+            Eğer & kullanmazsak: 
+                filename parametresi için orijinal std::string nesnesinin bir 
+                kopyası oluşturulur.
+                Bu kopya, readCode fonksiyonu içinde kullanılır ve fonksiyon 
+                tamamlandığında yok edilir.
+                std::string büyük bir metin tutuyorsa, kopyalama işlemi performansı 
+                düşürebilir ve bellekte ekstra yer kaplayabilir.
+
+
+
+    Bu fonksiyon, bir dosyadan orijinal ve kopya kod dizilerini okur. 
+    Şimdi bu işlevi daha ayrıntılı açıklayalım.
+
+
+    İlk satırda, std::ifstream inFile(filename); ifadesi ile filename isimli dosya açılır.
+    Açılamazsa hata döndürür
+
+
+    Kod Uzunluğunu Okuma
+        inFile >> length; ifadesi ile dosyadaki ilk değeri 
+        length değişkenine okur. Bu, kod dizisinin 
+        eleman sayısını belirtir.
+
+
+        5
+        101 102 103 104 105
+        101 102 103 104 106
+
+                inFile >> length; ifadesi ilk sıradaki 
+                5 değerini length değişkenine atar. 
+                Bu, kodun 5 elemanlı olduğunu gösterir.
+
+
+                5
+                101 102 103
+                104 105
+                101 102 103
+                104 106
+
+
+                inFile >> length; ifadesi 5 değerini okur ve imleç 5'ten sonra konumlanır.
+                İlk for döngüsü 101, 102, 103, 104, 105 değerlerini orjinalKod dizisine okur. Bu sırada boşluklar ve satır sonları inFile tarafından atlanır.
+                İkinci for döngüsü ise 101, 102, 103, 104, 106 değerlerini kopyaKod dizisine okur.
+
+
+
+    4. compareCode Fonksiyonu
+        Bu fonksiyon, orjinalKod ve kopyaKod dizilerini 
+        karşılaştırır ve sonucu bir dosyaya yazar. Şimdi 
+        bu işlevin detaylarını inceleyelim.
+
+
+            std::ofstream outFile(outputFilename); ifadesi ile outputFilename adlı çıktı dosyası açılır.
+
+
+        outFile << orjinalKod[i] << " -- " << kopyaKod[i] << "\n"; ifadesi ile her 
+        bir orijinal ve kopya kod çifti çıktı dosyasına yazılır.
+        if (orjinalKod[i] != kopyaKod[i]) ifadesi, eğer orijinal ve kopya koddaki elemanlar 
+        aynı değilse isCorrect değişkenini false olarak ayarlar.
+
+
