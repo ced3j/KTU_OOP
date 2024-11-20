@@ -194,15 +194,17 @@ Bir türü diğer türe çevirmek:
         (pointerlarda da normal değişkenlerde de)
     **** namespace 
     **** Enum
-
-
-// Sıradaki konular
     **** Fonksiyonlar ve array parametreler
     **** Varsayılan (Default) Parametreli Fonksiyon
     **** Pointer ve referans kullanımı 
-    **** Class ve Objeler 
     **** Arraylerle işlemler (özellikle fonksiyonlar ve classlarla ortak kullanım)
     **** Matrislerle işlemler 
+    **** Class 
+    **** this pointer
+
+// Sıradaki konular
+
+    **** Recursive örnekler
     **** Operator Overloading (Operatör Aşırı Yükleme)
     **** Friend Function
 
