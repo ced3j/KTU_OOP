@@ -1,0 +1,210 @@
+Veri Türleri (Data Types)
+Integral Veri Türleri:
+char, short, int, long, bool
+Bellek boyutları (ör. int 4 byte, bool 1 byte)
+
+
+Tür Dönüşümleri (Type Casting)
+static_cast
+Örnekler:
+static_cast<int>(7.9) → 7
+static_cast<double>(25) → 25.0
+Matematiksel işlemlerde kullanım:
+static_cast<double>(15) / 2 → 7.5
+
+
+Ön ek: ++variable, --variable
+Son ek: variable++, variable--
+
+
+InputStream: istream (ör. cin)
+
+cin >> variable: Kullanıcıdan veri alır.
+Veri türüne göre farklı davranışlar:
+char → Bir karakter okur. (25 → sadece 2)
+int → Tüm sayıyı okur. (25)
+double → Ondalıklı sayıları okur. (25.0)
+OutputStream: ostream (ör. cout)
+
+Çıktı verilerini ekrana yazdırır.
+
+
+
+
+2. Giriş İşlemleri Örnekleri
+
+Birden Fazla Değişken Okuma:
+
+
+
+char ch1, ch2;
+int num;
+cin >> ch1 >> ch2 >> num;
+Girdi: A 25
+ch1 = A
+ch2 = 2
+num = 5
+
+
+Karakter Dizisi Okuma:
+
+
+
+char str[100];
+cin.get(str, 100, '\n');
+'\n' karakterine kadar veya 100 karaktere kadar okur.
+
+
+cin.ignore Kullanımı
+Genel Yapı:
+
+
+
+cin.ignore(A, B);
+
+
+char ch1, ch2;
+cin >> ch1;
+cin.ignore(100, '.');
+cin >> ch2;
+
+
+
+istream Ekstra İşlevler
+    putback: Bir karakteri geri koyar.
+
+    Kodu kopyala
+    istreamVar.putback(ch);
+    peek: Akıştaki sonraki karakteri okur ama ilerlemez.
+
+    Kodu kopyala
+    ch = istreamVar.peek();
+
+
+std::cout << std::setw(10) << 123 << std::endl;
+
+. Karakter İşleme Akışında putback ve peek
+
+char ch;
+ch = std::cin.peek();
+std::cin.putback(ch);
+
+
+char ch;
+ch = std::cin.peek();  // İlk karakteri alır.
+std::cin.get(ch);      // Karakteri akıştan çıkarır.
+std::cin.putback(ch);  // Karakteri geri koyar.
+std::cin.get(ch);      // Karakteri tekrar okur.
+
+
+clear() Fonksiyonu
+    Akışın hata durumunu temizler. Akış bir hata durumuna girdiyse, tekrar kullanılabilir hale gelir.
+
+istreamVar
+
+
+
+
+
+
+3. Çıktı Manipülatörleri (<iomanip> Kütüphanesi)
+
+
+    setw: Çıktı genişliğini ayarlar.
+
+    std::cout << std::setw(10) << 123 << std::endl;
+    setprecision: Ondalık sayıların kaç haneli olacağını belirler.
+
+    std::cout << std::setprecision(2) << 123.456;  // 123.46
+    fixed: Ondalık sayıyı sabit noktada gösterir.
+
+    std::cout << std::fixed << std::setprecision(2) << 123.456;  // 123.46
+    setfill: Belirtilen karakterle dolgu yapar.
+
+    std::cout << std::setfill('*') << std::setw(10) << 123;  // *******123
+    Hizalama:
+    left: Çıktıyı sola hizalar.
+
+    std::cout << std::left << std::setw(10) << 123;
+    right: Çıktıyı sağa hizalar.
+
+    std::cout << std::right << std::setw(10) << 123;
+
+
+4. Karakter Dizisi Okuma (getline)
+Bir satırı okuyup bir string değişkenine atar.
+
+    std::string str;
+    std::getline(std::cin, str);
+
+
+
+5. Dosya Okuma ve Yazma İşlemleri
+    <fstream> Kütüphanesi:
+    ifstream → Dosyadan veri okuma.
+    ofstream → Dosyaya veri yazma.
+    Dosya Açma Modları:
+    ios::in → Okuma modu.
+    ios::out → Yazma modu.
+    ios::app → Dosya sonuna ekleme.
+    ios::trunc → Dosyayı açmadan önce içeriği siler.
+    Dosya Açma ve Kapatma:
+
+    ifstream inData;
+    ofstream outData;
+    inData.open("input.txt");
+    outData.open("output.txt");
+    inData.close();
+    outData.close();
+    
+
+Tür Dönüşümü (static_cast)
+Bir türü diğer türe çevirmek:
+    static_cast kullanılarak güvenli tür dönüşümü yapılır.
+
+    int sayi = 10;
+    double sayiDouble = static_cast<double>(sayi);
+
+
+
+
+
+
+
+
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
+
+
+
+**** ++variable variable-- (arttırma azaltma işlemleri ) 
+    (pointerlarda da normal değişkenlerde de)
+**** iomanip Kütüphanesi 
+**** Dosya işlemleri (belki çıkmayabilir en son bakmalık konu)
+**** Fonksiyonlar ve array parametreler
+**** Varsayılan (Default) Parametreli Fonksiyon
+**** inline function
+**** Pointer ve referans kullanımı 
+**** Class ve Objeler 
+**** Arraylerle işlemler (özellikle fonksiyonlar ve classlarla ortak kullanım)
+**** Matrislerle işlemler 
+**** Enum
+**** Operator Overloading (Operatör Aşırı Yükleme)
+**** Friend Function
+
+
+
+
+
