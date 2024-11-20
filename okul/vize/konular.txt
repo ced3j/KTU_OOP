@@ -189,22 +189,26 @@ Bir türü diğer türe çevirmek:
 
 
 
-**** ++variable variable-- (arttırma azaltma işlemleri ) 
-    (pointerlarda da normal değişkenlerde de)
-**** iomanip Kütüphanesi 
-**** Dosya işlemleri (belki çıkmayabilir en son bakmalık konu)
-**** Fonksiyonlar ve array parametreler
-**** Varsayılan (Default) Parametreli Fonksiyon
-**** inline function
-**** Pointer ve referans kullanımı 
-**** Class ve Objeler 
-**** Arraylerle işlemler (özellikle fonksiyonlar ve classlarla ortak kullanım)
-**** Matrislerle işlemler 
-**** Enum
-**** Operator Overloading (Operatör Aşırı Yükleme)
-**** Friend Function
+// Çalıştım
+    **** ++variable variable-- (arttırma azaltma işlemleri ) 
+        (pointerlarda da normal değişkenlerde de)
+    **** namespace 
+    **** Enum
 
 
+// Sıradaki konular
+    **** Fonksiyonlar ve array parametreler
+    **** Varsayılan (Default) Parametreli Fonksiyon
+    **** Pointer ve referans kullanımı 
+    **** Class ve Objeler 
+    **** Arraylerle işlemler (özellikle fonksiyonlar ve classlarla ortak kullanım)
+    **** Matrislerle işlemler 
+    **** Operator Overloading (Operatör Aşırı Yükleme)
+    **** Friend Function
 
 
+// Vakit kalırsa bakarsın konuları
+    **** iomanip Kütüphanesi 
+    **** Dosya işlemleri (belki çıkmayabilir en son bakmalık konu)
+    **** inline function
 

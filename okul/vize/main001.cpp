@@ -19,5 +19,19 @@ int main() {
     int asciiDeger = 56;
     char harf = static_cast<char>(asciiDeger);
 
+
+    char karakter = 'A';
+    double sonuc = static_cast<double>(static_cast<int>(karakter));
+    // char'ı önce int' çevirir sonra int halini double'a çevirir
+    // A karakterinin int değeri 65
+    // Double = 65.0
+
+
+    double kesirliSayi = 66.99;
+    char karakter = static_cast<char>(static_cast<int>(kesirliSayi));
+    // kesirli sayi önce int'e çevrildi sonra bu int char a çevrildi
+    
+
+
     return 0;
 }
