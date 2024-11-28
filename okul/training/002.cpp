@@ -31,6 +31,7 @@ class Library{
         Book* books[10];
 
         Library();
+        ~Library();
         void addBook(string, string);
         void displayBooks();
 
@@ -74,6 +75,14 @@ void Book::display() const{
 Library::Library(){
     bookCount = 0;
 }
+
+Library::~Library() {
+    for (int i = 0; i < bookCount; i++) {
+        delete books[i]; // Dinamik belleği temizle
+    }
+    cout << "Kutuphane kapatildi." << endl;
+}
+
 
 
 void Library::addBook(string title, string author){
