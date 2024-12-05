@@ -15,9 +15,7 @@ void ortakElemanBul(int arr1[], int arr2[], int sizeArr1, int sizeArr2, int comm
         }
     }
 
-    
 }
-
 
 
 int main(){
