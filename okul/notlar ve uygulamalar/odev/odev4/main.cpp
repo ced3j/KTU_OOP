@@ -25,8 +25,17 @@ class personType {
             return age;
         }
 
-        personType(string first, string last, int age) : firstN(first), lastN(last), age(age) {}
-        personType() : firstN(""), lastN(""), age(18) {} 
+        personType(string first, string last, int age){
+            firstN = first;
+            lastN = last;
+            this->age = age;
+        }
+
+        personType(){
+            firstN = " ";
+            lastN = " ";
+            age = 18; 
+        } 
 };
 
 class partTimeEmployee : public personType {
@@ -101,7 +110,7 @@ int main() {
     employee.print(); 
 
 
-    partTimeEmployee employee2("John", "Doe", 30, 10, 80);
+    partTimeEmployee employee2("John", "Doe", 30, 10.0, 2.5);
     employee2.print();
 
 
