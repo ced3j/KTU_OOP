@@ -1,0 +1,16 @@
+Inheritance Ödevi
+Bir hayvanat bahçesi yönetimi için bir yazılım tasarladığınızı düşünün. Temel bir Animal sınıfı oluşturun ve bu sınıfı miras alarak farklı hayvan türlerini temsil eden sınıflar oluşturun.
+
+Yapılacaklar:
+
+Animal sınıfını tasarlayın:
+
+Ortak özellikler: name (hayvan adı), age (yaşı).
+Ortak bir metod: makeSound() (hayvanın sesini çıkaran bir metod).
+Bird ve Fish sınıflarını Animal sınıfından türetin:
+
+Bird sınıfı için ek özellik: canFly (uçabiliyor mu?).
+Fish sınıfı için ek özellik: waterType (tatlı su mu, tuzlu su mu?).
+Her sınıfta makeSound() metodunu override edin. Örneğin, Bird için "Chirp Chirp", Fish için "Blub Blub" sesi çıkarın.
+
+Beklenen Çıktı: Bir Bird ve bir Fish oluşturup bilgilerini ve seslerini ekrana yazdırın

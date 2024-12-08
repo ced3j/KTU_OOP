@@ -1,0 +1,19 @@
+Composition Ödevi
+Bir müzik çalar uygulaması tasarladığınızı düşünün. Bu uygulamada MusicPlayer sınıfı, çeşitli bileşenleri içermelidir.
+
+Yapılacaklar:
+
+Aşağıdaki bileşenler için sınıflar oluşturun:
+
+Speaker: Özellikleri: volume (ses seviyesi), metod: playSound().
+Battery: Özellikleri: chargeLevel (şarj seviyesi), metod: useBattery().
+Playlist: Özellikleri: songs (şarkılar listesi), metod: playSong(index).
+MusicPlayer sınıfı tasarlayın:
+
+Speaker, Battery ve Playlist bileşenlerini içersin.
+playMusic() metodu: Playlist'teki bir şarkıyı çalsın ve hoparlörden ses çıkarırken bataryayı azaltsın.
+Beklenen Çıktı:
+
+Bir MusicPlayer oluşturun.
+Birkaç şarkı ekleyin.
+Bir şarkıyı oynatırken ses seviyesi ve batarya durumu güncellensin.
