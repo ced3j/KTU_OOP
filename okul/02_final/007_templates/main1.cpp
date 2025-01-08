@@ -6,10 +6,6 @@ class Sample {
 };
 
 
-
-
-
-
 Birden fazla tür kullanılabilir
 
     template <typename T1, typename T2>
@@ -26,6 +22,7 @@ Birden fazla tür kullanılabilir
 using namespace std;
 
 
+// A template class that stores a value of any type T.
 template <typename T>
 class Box{
     private:
@@ -39,7 +36,6 @@ class Box{
             return value;
         }
 };
-
 
 
 template <typename T>
