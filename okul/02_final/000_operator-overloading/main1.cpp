@@ -19,6 +19,8 @@ class Point{
     public:
     Point(int x = 0, int y = 0) : x(x), y(y){}
         Point operator +(const Point& other){
+            cout << x;
+            cout << "-" << y << endl;
             return Point(this->x + other.x, this->y + other.y);
         }
 
@@ -29,10 +31,11 @@ class Point{
 
 
 int main(){
-    Point p1(3,4);
-    Point p2(1,2);
+    Point p1(1,2);
+    Point p2(3,4);
+    
     Point p3 = p1 + p2;
 
-    p3.display();
+
     return 0;
 }
