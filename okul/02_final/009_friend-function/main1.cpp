@@ -9,6 +9,8 @@ erişim hakkı verilen bir fonksiyondur. Normalde, sınıf dışındaki bir fonk
 #include <iostream>
 using namespace std;
 
+
+
 class Rectangle{
     private:
         int width, height;
@@ -17,15 +19,33 @@ class Rectangle{
         friend int calculateArea(const Rectangle& rect);
 };
 
+
+
+
+class TestShape : public Rectangle{
+    public:
+        TestShape(int w, int h) : Rectangle(w, h){}
+};
+
+
+
 // friend function
 int calculateArea(const Rectangle& rect){
     return rect.width * rect.height;
 }
 
+
+
 int main(){
     Rectangle rect(5, 10);
-    cout << "Area: " << calculateArea(rect) << endl;
+    TestShape shp(10, 20);
+    TestShape* shp2 = new TestShape(10, 25);
 
+    cout << "Area: " << calculateArea(rect) << endl;
+    cout << "Area2: " << calculateArea(shp) << endl;
+    cout << "Area3: " << calculateArea(*shp2) << endl;
+
+    delete shp2;
     
     return 0;
 }
